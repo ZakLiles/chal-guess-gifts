@@ -1,7 +1,7 @@
 const guessGifts = (wishlist, presents) => {
-    return wishlist.filter(gift => {
+    return wishlist.filter(wish => {
         return presents.some(present => {
-            return gift.size === present.size && gift.clatters === present.clatters && gift.weight === present.weight
+            return wish.size === present.size && wish.clatters === present.clatters && wish.weight === present.weight
         })
     }).map(guess => guess.name);
 }
